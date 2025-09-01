@@ -456,4 +456,5 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
-    main()
+    debug_mode = os.getenv("FLASK_DEBUG", "false").lower() == "true"
+    socketio.run(app, debug=debug_mode, port=8007)
