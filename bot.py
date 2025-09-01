@@ -456,5 +456,6 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
-    debug_mode = os.getenv("FLASK_DEBUG", "false").lower() == "true"
-    socketio.run(app, debug=debug_mode, port=8007)
+    logging.info("Bot is starting...")
+    main()
+
